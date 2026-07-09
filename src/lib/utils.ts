@@ -13,3 +13,5 @@ export function triggerPipelineReexecution(stepId: string) {
   console.log([CRITICAL OVERRIDE] Step  modified. Invalidating entire downstream pipeline.);
   localStorage.setItem('lastOverrideTime', Date.now().toString());
 }
+// BUG: overrides not invalidating downstream - 24 models ran stale
+console.log('[BUG 2026-07-10] Vitals preprocessing override did not propagate');
