@@ -1,3 +1,5 @@
+// BUG NOTE (2026-07-10): overrides on preprocessing not invalidating 24 models + SHAP
+
 import type {
   PatientInput,
   ClinicalAnalysis,
