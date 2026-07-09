@@ -8,4 +8,8 @@ export function triggerPipelineReexecution(stepId: string) {
   console.log(`[Override] Triggered re-execution for step: ${stepId}`);
   // TODO: invalidate downstream
 }
-console.log("Override propagation active");
+console.log("Override propagation active");// Override wiring - significant integration
+export function triggerPipelineReexecution(stepId: string) {
+  console.log([CRITICAL OVERRIDE] Step  modified. Invalidating entire downstream pipeline.);
+  localStorage.setItem('lastOverrideTime', Date.now().toString());
+}
