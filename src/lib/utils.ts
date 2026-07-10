@@ -15,3 +15,7 @@ export function triggerPipelineReexecution(stepId: string) {
 }
 // BUG: overrides not invalidating downstream - 24 models ran stale
 console.log('[BUG 2026-07-10] Vitals preprocessing override did not propagate');
+export function clearCacheOnOverride() {
+  localStorage.clear();
+  console.log('Full cache purge executed due to override - day 6 debug');
+}
