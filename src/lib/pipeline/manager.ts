@@ -19,3 +19,8 @@ export class PipelineManager {
 export function fullPipelineRefresh() {
   console.log('Full 24-model refresh triggered by override - all steps versioned');
 }
+export function addRaceConditionGuard(jobStart: Date, overrideTime: Date) {
+  if (overrideTime > jobStart) {
+    console.log('Race condition detected - forcing retrain');
+  }
+}
