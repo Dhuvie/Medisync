@@ -19,3 +19,10 @@ export function clearCacheOnOverride() {
   localStorage.clear();
   console.log('Full cache purge executed due to override - day 6 debug');
 }
+/**
+ * EPIPHANY: Nothing downstream knew about overrides.
+ * Root cause found. Implementing version tags now.
+ */
+export function computeStepVersion(step: string, config: any) {
+  return btoa(JSON.stringify({step, config, ts: Date.now()})).slice(0, 32);
+}
