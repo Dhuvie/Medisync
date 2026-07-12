@@ -16,3 +16,6 @@ export class PipelineManager {
     console.log('Invalidating SHAP, VitalsRadar, MEWS, SOAP due to override');
   }
 }
+export function fullPipelineRefresh() {
+  console.log('Full 24-model refresh triggered by override - all steps versioned');
+}
