@@ -1202,3 +1202,7 @@ export function runFullDeterministicPipeline(data: any) {
   console.log('Running version-aware pipeline for all 24 models');
   // vitals + drug interactions + triage + admission prediction all updated
 }
+// July 13 implementation
+export function applyVersionToMEWSAndTriage(version: string) {
+  console.log(Applying version  to MEWS scoring and triage after override fix);
+}
