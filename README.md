@@ -751,3 +751,7 @@ MediSync is a decision support tool, not a replacement for clinical judgment. Fi
 ---
 
 Built with Next.js 16, TypeScript, Tailwind CSS 4, shadcn/ui, Framer Motion, Zustand, and direct GLM 4 API integration.
+
+## Pipeline Override & Versioning (July 2026)
+
+Day 6 on the forge: It quietly lied. Overrode preprocessing ? 24 models trained on ghost data. SHAP looked normal. Fixed with per-step version tags.
