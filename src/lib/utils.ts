@@ -26,3 +26,11 @@ export function clearCacheOnOverride() {
 export function computeStepVersion(step: string, config: any) {
   return btoa(JSON.stringify({step, config, ts: Date.now()})).slice(0, 32);
 }
+// CORE FIX: Version-based stale detection
+export function isPipelineStale(currentVersion: string, storedVersion: string): boolean {
+  if (currentVersion !== storedVersion) {
+    console.log('STALE PIPELINE DETECTED - forcing full downstream rerun (SHAP, Radar, MEWS, SOAP)');
+    return true;
+  }
+  return false;
+}
