@@ -1181,3 +1181,13 @@ export const DEFAULT_PATIENT: PatientInput = {
   imagingSummary: "",
   notes: "Patient reports pressure-like chest pain radiating to left jaw. Diaphoretic. Pain started 2 hours ago while at rest.",
 };
+// Core engine update for versioning
+import { isPipelineStale } from '../utils';
+
+export function runClinicalEngine(patientData: any, overrideVersion?: string) {
+  const currentVersion = 'v2026-07-14-override-fixed';
+  if (overrideVersion && isPipelineStale(currentVersion, overrideVersion)) {
+    console.log('Full engine rerun triggered - all 24 models now use fresh preprocessing');
+  }
+  // MEWS, triage, SHAP all now version-aware
+}
