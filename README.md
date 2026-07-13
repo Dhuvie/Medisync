@@ -755,3 +755,7 @@ Built with Next.js 16, TypeScript, Tailwind CSS 4, shadcn/ui, Framer Motion, Zus
 ## Pipeline Override & Versioning (July 2026)
 
 Day 6 on the forge: It quietly lied. Overrode preprocessing ? 24 models trained on ghost data. SHAP looked normal. Fixed with per-step version tags.
+### Pipeline Improvements
+- Added full step versioning system
+- Fixed stale data bug affecting 24 models
+- SHAP, Radar, and SOAP now update correctly on overrides
