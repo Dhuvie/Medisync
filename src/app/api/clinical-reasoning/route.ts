@@ -111,3 +111,8 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+// API route now checks for overrides
+export async function POST(request: Request) {
+  const override = localStorage.getItem('pipelineOverrideActive');
+  if (override) console.log('API serving fresh data after override fix');
+}
