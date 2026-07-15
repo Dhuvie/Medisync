@@ -75,6 +75,3 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-export async function POST() {
-  console.log('SOAP note generation now uses versioned pipeline after override fix');
-}

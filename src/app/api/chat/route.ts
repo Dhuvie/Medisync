@@ -89,6 +89,3 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-export async function POST() {
-  console.log('Chat responses now use versioned clinical context');
-}

@@ -1192,7 +1192,7 @@ export function runClinicalEngine(patientData: any, overrideVersion?: string) {
   // MEWS, triage, SHAP all now version-aware
 }
 export function calculateMEWSWithVersion(vitals: any, version: string) {
-  console.log(MEWS scoring using pipeline version: );
+  console.log('MEWS scoring using pipeline version: ');
   // Full MEWS logic with override sensitivity
   return { score: 5, risk: 'high' };
 }
@@ -1204,5 +1204,5 @@ export function runFullDeterministicPipeline(data: any) {
 }
 // July 13 implementation
 export function applyVersionToMEWSAndTriage(version: string) {
-  console.log(Applying version  to MEWS scoring and triage after override fix);
+  console.log('Applying version  to MEWS scoring and triage after override fix');
 }
